@@ -9,6 +9,7 @@ let client_h = window.innerHeight,
 	screen_h = window.outerHeight,
 	screen_w = window.outerWidth,
 	navbar_h = $(navbar)[0].clientHeight,
+	mainElement = $(mainBody).length ? mainBody : 'main',
 	prevScrollPos = window.scrollY;
 
 $(mainBody).css({
@@ -17,4 +18,23 @@ $(mainBody).css({
 
 $(`${body} .hero`).css({
 	height: '100vh'
-})
+});
+
+$(window).on({
+	load: function () {
+	},
+	resize: function () {
+		client_w = window.innerWidth;
+		navbar_h = $(navbar)[0].clientHeight;
+	},
+	scroll: function () {
+		let navbarRect = $(navbar)[0].getBoundingClientRect(),
+			mainElementRect = ($('main > .hero').length ? $(`${mainElement} > section:first-child .content`)[0] : $(`${mainElement} > section:first-child`)[0]).getBoundingClientRect();
+		
+		if (mainElementRect.top <= navbarRect.bottom)
+			$(navbar).removeClass('bg-transparent').addClass('bg-dark');
+		else
+			$(navbar).removeClass('bg-dark').addClass('bg-transparent');
+		prevScrollPos = window.scrollY;
+	}
+});

@@ -1,5 +1,8 @@
 :root {
 	--ok-primary: #0c3678;
+	--ok-secondary: #cea00f;
+	--ok-primary-deep: #0b2b5f;
+	--ok-secondary-deep: #ba900e;
 }
 
 #body-background {
@@ -10,8 +13,57 @@
 	background-size: cover;
 }
 
-.site-bg {
+.bg-site {
 	background-color: var(--ok-primary);
+}
+
+.bg-site-secondary {
+	background-color: var(--ok-secondary);
+}
+
+.text-site {
+	color: var(--ok-primary);
+}
+
+.text-site-secondary {
+	color: var(--ok-secondary);
+}
+
+.btn-site {
+	color: #fff;
+	background-color: var(--ok-primary);
+	border-color: var(--ok-primary);
+}
+
+.btn-site:hover {
+	color: #fff;
+	background-color: var(--ok-primary-deep);
+	border-color: var(--ok-primary-deep);
+}
+
+.btn-site:disabled,
+.btn-site.disabled {
+	color: #fff;
+	background-color: var(--ok-primary);
+	border-color: var(--ok-primary);
+}
+
+.btn-site-secondary {
+	color: #fff;
+	background-color: var(--ok-secondary);
+	border-color: var(--ok-secondary);
+}
+.btn-site-secondary:hover {
+	color: #fff;
+	background-color: var(--ok-secondary-deep);
+	border-color: var(--ok-secondary-deep);
+}
+
+.btn-site-secondary:disabled,
+.btn-site-secondary.disabled {
+	color: #000;
+	background-color: var(--ok-secondary);
+	border-color: var(--ok-secondary);
 }
 
 nav.navbar .nav-link {
