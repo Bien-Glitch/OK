@@ -16,16 +16,20 @@ $(mainBody).css({
 	marginTop: `calc(${navbar_h}px)`
 });
 
-$(`${body} .hero`).css({
-	height: '100vh'
-});
+alignHeroSection = () => {
+	$(`${body} .hero`).css({
+		height: client_h
+	});
+}
 
 $(window).on({
 	load: function () {
 	},
 	resize: function () {
 		client_w = window.innerWidth;
+		client_h = window.innerHeight;
 		navbar_h = $(navbar)[0].clientHeight;
+		alignHeroSection();
 	},
 	scroll: function () {
 		let navbarRect = $(navbar)[0].getBoundingClientRect(),
@@ -38,3 +42,5 @@ $(window).on({
 		prevScrollPos = window.scrollY;
 	}
 });
+
+alignHeroSection();
