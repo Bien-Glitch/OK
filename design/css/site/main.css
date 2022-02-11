@@ -1,0 +1,116 @@
+:root {
+	--ok-primary: #0c3678;
+}
+
+#body-background {
+	inset: 0;
+	z-index: -2;
+	filter: brightness(30%);
+	background: url(../../img/crypto.webp) no-repeat center;
+	background-size: cover;
+}
+
+.site-bg {
+	background-color: var(--ok-primary);
+}
+
+nav.navbar .nav-link {
+	font-size: .8rem;
+}
+
+section:not(:first-child) {
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+}
+
+#index-page .hero .hero-background {
+	inset: 0;
+	z-index: -1;
+	filter: brightness(40%) drop-shadow(0 5px 10px black);
+	background: url(../../img/hero.jpeg) no-repeat fixed right;
+	background-size: cover;
+}
+
+#index-page .hero .content {
+	width: 100%;
+}
+
+#index-page .hero .content .top > *:first-child {
+	line-height: 1.0;
+	margin-bottom: 1rem;
+}
+
+#index-page .hero .content .bottom > a + a {
+	line-height: 1.0;
+}
+
+#index-page .hero .content .bottom > a:not(:nth-child(2)) {
+	font-size: 13px;
+}
+
+#index-page .hero .content .bottom > a:nth-child(2) img {
+	width: 80px;
+}
+
+#index-page .hero .content .bottom > a:not(:nth-child(2)) img {
+	width: 25px;
+}
+
+#plans .card {
+	border: 0;
+	color: white;
+	background-color: transparent;
+}
+
+#plans .card .card-body {
+	font-size: 12px;
+}
+
+#plans .card .card-body > :first-child,
+#plans .card .card-body > :last-child {
+	padding-top: 1rem !important;
+	padding-bottom: 1rem !important;
+}
+
+#plans .card .card-body > :first-child {
+	font-size: 1.5rem;
+	font-weight: 700;
+}
+
+#plans .card .card-body > :last-child {
+	border-radius: 0 0 40px 40px;
+}
+
+#plans .card .card-body > div {
+	background-color: #326dc9;
+}
+
+#plans .card .card-body > div:nth-of-type(odd) {
+	background-color: #275195;
+}
+
+@media (min-width: 992px) {
+	#index-page .hero .content {
+		width: 55%;
+	}
+	
+	#index-page .hero .content .bottom a:nth-child(2) img {
+		width: 150px;
+	}
+	
+	#index-page .hero .content .bottom a:not(:nth-child(2)) img {
+		width: 45px;
+	}
+}
+
+@media (min-width: 1400px) {
+	#index-page .hero .content {
+		width: 44%;
+	}
+}
+
+@media (max-width: 991.98px) {
+	#index-page .hero .content .bottom > a:not(:nth-child(2)) {
+		font-size: 12px;
+	}
+}
