@@ -53,6 +53,7 @@
 	background-color: var(--ok-secondary);
 	border-color: var(--ok-secondary);
 }
+
 .btn-site-secondary:hover {
 	color: #fff;
 	background-color: var(--ok-secondary-deep);
@@ -96,9 +97,9 @@ section:not(:first-child) {
 	line-height: 1.0;
 }
 
-#index-page .hero .content .bottom > a:not(:nth-child(2)) {
-	font-size: 13px;
-}
+/*#index-page .hero .content .bottom > a:not(:nth-child(2)) {
+	font-size: 14px;
+}*/
 
 #index-page .hero .content .bottom > a:nth-child(2) img {
 	width: 80px;
@@ -115,7 +116,7 @@ section:not(:first-child) {
 }
 
 #plans .card .card-body {
-	font-size: 12px;
+	font-size: 14px;
 }
 
 #plans .card .card-body > :first-child,
@@ -143,7 +144,7 @@ section:not(:first-child) {
 
 @media (min-width: 992px) {
 	#index-page .hero .content {
-		width: 55%;
+		width: 75%;
 	}
 	
 	#index-page .hero .content .bottom a:nth-child(2) img {
@@ -157,12 +158,12 @@ section:not(:first-child) {
 
 @media (min-width: 1400px) {
 	#index-page .hero .content {
-		width: 44%;
+		width: 66%;
 	}
 }
 
 @media (max-width: 991.98px) {
 	#index-page .hero .content .bottom > a:not(:nth-child(2)) {
-		font-size: 12px;
+		font-size: 14px;
 	}
 }
